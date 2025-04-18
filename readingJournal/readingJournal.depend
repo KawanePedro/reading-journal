@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1744939272 source:c:\users\kawan\onedrive\documentos\c\teste2323\main.c
+	<mysql.h>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
