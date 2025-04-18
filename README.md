@@ -40,5 +40,5 @@ CREATE TABLE leituras (
  ### Como executar
 - Pré-requisitos:
     -
--Configuração do banco:
+- Configuração do banco:
     Crie o banco diario_leitura e as tabelas acima.
