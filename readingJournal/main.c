@@ -52,7 +52,7 @@ void cadastrarLeitura(MYSQL *con, int usuario_id) {
     scanf(" %[^\n]", titulo);
     printf("Autor: ");
     scanf(" %[^\n]", autor);
-    printf("Data (DD/MM/AAAA): ");
+    printf("Data (AAAA/MM/DD): ");
     scanf("%s", data);
     printf("Nota (1-10): ");
     scanf("%d", &nota);
@@ -81,7 +81,7 @@ void listarLeituras(MYSQL *con, int usuario_id) {
     MYSQL_RES *result = mysql_store_result(con);
     MYSQL_ROW row;
 
-    printf("\n====== LEITURAS DE %d ======\n\n", usuario_id);
+    printf("\n====== LEITURAS %d ======\n\n", usuario_id);
     while((row = mysql_fetch_row(result))) {
         printf("--------------------");
         printf("\nLivro: %s\n", row[1]);
@@ -127,7 +127,7 @@ void menuPrincipal() {
 
 int main() {
     MYSQL *con = mysql_init(NULL);
-    if (!mysql_real_connect(con, "localhost", "root", "Kaw!789657",
+    if (!mysql_real_connect(con, "localhost", "usuario", "senha", // adicione o usuario e senha do seu banco de dados
                            "diario_leitura", 0, NULL, 0)) {
         printf("Erro: %s\n", mysql_error(con));
         return 1;
